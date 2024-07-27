@@ -21,6 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd app
           python -m venv venv
           source venv/bin/activate
           pip install --upgrade pip
@@ -28,5 +29,6 @@ jobs:
 
       - name: Run tests
         run: |
+          cd app
           source venv/bin/activate
           python -m unittest discover
